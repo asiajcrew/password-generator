@@ -34,6 +34,7 @@ var specialCharacterChoice = window.confirm("Would you like to use special chara
   if (specialCharacterChoice === true) {
     masterListArray = masterListArray.concat(specialCharacterArray)
   }
+return inputArray.join("");
 }
 
 // Write password to the #password input
