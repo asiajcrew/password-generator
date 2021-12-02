@@ -18,11 +18,11 @@ var promptLength = window.prompt("How many characters would you like your passwo
     generatePassword();
   }
 // pick character from master list of arrays
-var lowerCaseChoice = window.confirm("Would you like to use lowercase leters in your password?")
+var lowerCaseChoice = window.confirm("Would you like to use lowercase letters in your password?")
   if (lowerCaseChoice === true) {
     masterListArray = masterListArray.concat(lowerCaseArray)
   }
-var upperCaseChoice = window.confirm("Would you like to use uppercase leters in your password?")
+var upperCaseChoice = window.confirm("Would you like to use uppercase letters in your password?")
   if (upperCaseChoice === true) {
     masterListArray = masterListArray.concat(upperCaseArray)
   }
@@ -34,6 +34,11 @@ var specialCharacterChoice = window.confirm("Would you like to use special chara
   if (specialCharacterChoice === true) {
     masterListArray = masterListArray.concat(specialCharacterArray)
   }
+console.log(masterListArray)
+
+for (var i = 0; i < promptLength; i++) {
+  inputArray.push (masterListArray[Math.floor(Math.random() * masterListArray.length)]);
+}
 return inputArray.join("");
 }
 
